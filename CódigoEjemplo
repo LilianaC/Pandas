@@ -1,0 +1,27 @@
+import plotly.graph_objects as go
+import pandas as pd
+ 
+df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_usa_states.csv')
+df = df.head(10)
+ 
+colores = ["SkyBlue" if (x% 2) == 0 else "Seashell" for x in df['Rank']]
+ 
+fig = go.Figure(data=[go.Table(
+   columnorder = [1,2,3,4],
+   columnwidth = [.10,.25,.10,.20],
+ 
+   header=dict(values=[f"<b>{col}</b>" for col in df.columns],
+               fill_color='royalblue',
+               align='center',
+               font=dict(color='white', size=14)),
+ 
+   cells=dict(values=[df.Rank, df.State, df.Postal, df.Population],
+             
+              fill=dict(color=[colores]),
+              align='left',
+              font_size=12))
+  
+])
+ 
+fig.update_layout(height=250, width=600,margin=dict(r=5, l=5, t=5, b=5))
+fig.show()
