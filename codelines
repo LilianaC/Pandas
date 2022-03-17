@@ -1,0 +1,8 @@
+df2=df[(df['date'] > '1872-01-01') & (df['date'] < '1900-12-31')]
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots(figsize=(15,15))
+selecc = pd.crosstab(df2.home_score,[df2.away_score])
+plt.tick_params(axis='both', which='major', labelsize=10, labelbottom = False, bottom=False, top = False, labeltop=True)
+ax = sns.heatmap(selecc,annot=True, linewidths=.5, fmt="d",cmap="YlGnBu")
