@@ -1,0 +1,6 @@
+ax.pie(valores,labels=etiqsp, colors=colors,autopct='%1.1f%%', shadow=True,
+                                          startangle=80, radius=1.5,
+                                          center=(0.5, 0.5), textprops={'fontsize': 13},
+                                          frame=False, pctdistance=.8,
+                                                  wedgeprops= {"edgecolor":"lightsteelblue",'linewidth': 2,
+                                                  'antialiased': True})
