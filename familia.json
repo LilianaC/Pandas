@@ -1,0 +1,21 @@
+{
+   "nombre": "Jane",
+   "apellido": "Doe",
+   "hobbies": [
+      "correr",
+      "nadar",
+      "cantar"
+   ],
+   "edad": 35,
+   "pekes": [
+      {
+         "nombre": "Alice",
+         "edad": 6
+      },
+      {
+         "nombre": "Bob",
+         "edad": 8
+      }
+   ]
+}
+
